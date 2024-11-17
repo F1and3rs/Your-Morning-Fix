@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,7 +15,6 @@
   <main class="container">
     <h1>Adding Points</h1>
     <form id="adding-points" class="p-5">
-      Points-Button-Functions
       <div class="mb-3">
         <label for="inputPhone" class="form-label">Customer Phone Number</label>
         <input type="phone" class="form-control" id="inputPhone">
@@ -30,9 +28,15 @@
         <input type="new-points" class="form-control" id="inputPoints" readonly>
       </div>
       <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Add Points</button>
+        <button type="submit" class="btn btn-primary" id="button" disabled>Add Points</button>
       </div>
+      <label type="total-points" class="form-control" id="totalPoints" readonly>
     </form>
+    <div class="mb-3">
+      <label for="inputTotal" class="form-label">Total Points</label>
+      <input type="total-points" class="form-control" id="totalPoints" readonly>
+    </div>
+ 
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
