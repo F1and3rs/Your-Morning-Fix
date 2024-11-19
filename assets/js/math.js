@@ -1,47 +1,57 @@
-const formEl = document.querySelector("#adding-points")
-const phoneEl = document.querySelector("#inputPhone")
-const spendEl = document.querySelector("#inputTotal")
-const pointsEl = document.querySelector("#inputPoints")
-const totalPointsEl = document.querySelector("#totalPoints")
-
+const formEl = document.querySelector("#adding-points");
+const phoneEl = document.querySelector("#inputPhone");
+const spendEl = document.querySelector("#inputTotal");
+const pointsEl = document.querySelector("#inputPoints");
+const totalPointsEl = document.querySelector("#totalPoints");
+const button = document.querySelector("#button");
 
 const storeCustomerDetails = (customerData) => {
-    const savedCusotmerDetails = JSON.parse(localStorage.getItem("customerDetails")) || []  
-    let existingCusotmer = false
-    console.log(savedCusotmerDetails,customerData)
-    for(let i=0;i<savedCusotmerDetails.length;i++){
-        if(savedCusotmerDetails[i].phone == customerData.phone){
-            savedCusotmerDetails[i].totalPoints += customerData.points
-            existingCusotmer = true
-            totalPointsEl.innerText = savedCusotmerDetails[i].totalPoints
-        }
-    }
-    if(!existingCusotmer){
-        totalPointsEl.innerText = customerData.points
-        savedCusotmerDetails.push({
-            phone:customerData.phone,
-            totalPoints:customerData.points
-        })
-    }
-    localStorage.setItem("customerDetails",JSON.stringify(savedCusotmerDetails))
-    setTimeout(function(){
+  const savedCustomerDetails =
+    JSON.parse(localStorage.getItem("customerDetails")) || [];
+  let existingCustomer = false;
 
-        phoneEl.value = ""
-        spendEl.value = ""
-        pointsEl.value = ""
-        totalPointsEl.value = ""
-    },3000)
-}
+  for (let i = 0; i < savedCustomerDetails.length; i++) {
+    if (savedCustomerDetails[i].phone == customerData.phone) {
+      savedCustomerDetails[i].totalPoints += customerData.points;
+      existingCustomer = true;
+      totalPointsEl.innerText = savedCustomerDetails[i].totalPoints;
+    }
+  }
+  if (!existingCustomer) {
+    totalPointsEl.innerText = customerData.points;
+    savedCustomerDetails.push({
+      phone: customerData.phone,
+      totalPoints: customerData.points,
+    });
+  }
+  localStorage.setItem("customerDetails", JSON.stringify(savedCustomerDetails));
+  setTimeout(function () {
+    button.disabled = true;
+    phoneEl.value = "";
+    spendEl.value = "";
+    pointsEl.value = "";
+    totalPointsEl.value = "";
+  }, 3000);
+};
 
 const calculatePoints = (event) => {
-    event.preventDefault()
-    const phone = parseInt(phoneEl.value)
-    const spend = parseInt(spendEl.value)
-    //const points = spend * Math.floor(Math.random() * 1)
-    const points = Math.floor(spend * 1)
-    pointsEl.value = points
-    storeCustomerDetails({phone,points})
-}
+  event.preventDefault();
+  const phone = parseInt(phoneEl.value);
+  const spend = parseInt(spendEl.value);
+  //const points = spend * Math.floor(Math.random() * 1)
+  const points = Math.floor(spend * 1);
+  pointsEl.value = points;
+  storeCustomerDetails({ phone, points });
+};
 
+const hasValue = (item) => {
+  if (item.value) return true;
+  return false;
+};
 
-formEl.addEventListener("submit", calculatePoints)
+const checkForm = () => {
+  if (hasValue(phoneEl) && hasValue(spendEl)) return (button.disabled = false);
+};
+
+formEl.addEventListener("submit", calculatePoints);
+formEl.addEventListener("input", checkForm);
