@@ -5,6 +5,7 @@ const pointsEl = document.querySelector("#inputPoints");
 const totalPointsEl = document.querySelector("#totalPoints");
 const button = document.querySelector("#button");
 
+
 const storeCustomerDetails = (customerData) => {
   const savedCustomerDetails =
     JSON.parse(localStorage.getItem("customerDetails")) || [];
@@ -34,8 +35,15 @@ const storeCustomerDetails = (customerData) => {
   }, 3000);
 };
 
+
 const calculatePoints = (event) => {
   event.preventDefault();
+  modal.style.display = "block";
+  body.style.position = "static";
+  body.style.height = "50%";
+  body.style.overflow = "hidden";
+  
+  console.log("calculateonce")
   const phone = parseInt(phoneEl.value);
   const spend = parseInt(spendEl.value);
   //const points = spend * Math.floor(Math.random() * 1)
@@ -50,8 +58,11 @@ const hasValue = (item) => {
 };
 
 const checkForm = () => {
+  console.log("checkForm")
   if (hasValue(phoneEl) && hasValue(spendEl)) return (button.disabled = false);
 };
 
+
+
 formEl.addEventListener("submit", calculatePoints);
-formEl.addEventListener("input", checkForm);
+formEl.addEventListener("input", checkForm); 
