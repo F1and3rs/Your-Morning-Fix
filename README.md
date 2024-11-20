@@ -1,6 +1,7 @@
-# ☕  Your Morning Fix ☕ Loyalty Rewards Program
+# ![alt text](image.png)  Your Morning Fix ☕ Loyalty Rewards Program 
 
-![\[!\[Contributor Covenant\](https://img.shields.io/badge/Contributor%](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)
+
+![\[!\[Contributor Covenant\](https://img.shields.io/badge/Contributor%](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)  ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
 We wanted a low tech browser based app for a coffee shop or small business owner to: 
 
@@ -9,17 +10,17 @@ We wanted a low tech browser based app for a coffee shop or small business owner
 * Works in most browsers.
 
 ## ☕ Usage
+Launch the program by clicking the link provided
 
-Provide instructions and examples for use. Include screenshots as needed.
+  
+    ![Coffee app mainpage](./assets/img/YourMorningMain.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![Coffee app mainpage](assets/img/YourMorningMain.jpg)
-    ```
+Either click New User or Returning User and add customer phone number, transaction total, and watch the points add up! The Add Points button will be disabled until customer data is added.
+    
+    ![Customer data input page](./assets/img/rtrn.png)
 
 ## ☕ Installation
-To launch Your Morning Fix Rewards Program, simply click the link and start entering customers as they come! No need for us to track the data because everything is stored locally in your browser!
+To launch Your Morning Fix Loyalty Rewards Program, simply click the link and start entering customers as they come! No need for us to track the data because everything is stored locally in your browser!
 
 ## ☕ Trials
 
@@ -39,7 +40,7 @@ To launch Your Morning Fix Rewards Program, simply click the link and start ente
 
 ## ☕ Deployment Link
 
-[Placeholder Text](https://www.linkedin.com/in/sangeetha-kaliaperumal/)
+[Your Morning Fix Webpage](https://f1and3rs.github.io/Your-Morning-Fix/)
 
 ## ☕ Credits
 
@@ -52,16 +53,19 @@ Thanks to tutor [Sangeetha Kaliaperumal](https://www.linkedin.com/in/sangeetha-k
 Modal tutorial from [Wesley/ByteGrad](https://www.youtube.com/watch?v=XUhdzIO6lgg)
 
 [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) 
+
+## Future Features!
+---
+* User Survey “How was your experience?”
+* Popular item tracking
+* Customer Frequency
+* Customer purchasing habits
+* Determine which locations are most patronized
+* Order ticketing system for POS integration
+* Business acumen reporting
+* Text prediction for returning customers
+
  
-
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-
 
 ## How to Contribute
 

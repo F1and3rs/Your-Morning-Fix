@@ -1,8 +1,8 @@
 
 
-    var modal = document.getElementById("myModal");
-    var span = document.getElementsByClassName("close")[0];
-    var body =document.querySelector("body");
+    const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+    const body =document.querySelector("body");
     
 
     
